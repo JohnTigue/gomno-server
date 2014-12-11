@@ -54,5 +54,5 @@ Spark was chosen because:
 - Good at statistics, OLAP, and data munging including loosely structured data (such as coming from multiple sources)
 - Plays well with existing Java and R tools and the Hadoop ecosystem
 - Spark 1.1 has nice JSON tools; "No need to define JSON schema, no ETL, easy to access complex structures"
-	 - in@~9m: https://www.youtube.com/watch?v=MFSUAkDBSdQ&index=7&list=PL-x35fyliRwiDhtOvRSNgMdw05xFMzvhU
+  - see in@~9m: [Easy JSON Data Manipulation in Spark - Yin Huai (Databricks)](https://www.youtube.com/watch?v=MFSUAkDBSdQ&feature=player_detailpage&list=PL-x35fyliRwiDhtOvRSNgMdw05xFMzvhU#t=549)
 - Spark can deal with streaming situations, such as Twitter streams of (hopefully) geotagged #GOMNO tagged messages, as well as [standard UN emergency hastags](http://www.unocha.org/node/117960) which during emergencies can ["often reaching up to thousands of postings and hundreds of photos per minute"](http://www.aljazeera.com/indepth/opinion/2014/11/how-tweets-algorithms-can-sav-20141130142519956906.html).
