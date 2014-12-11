@@ -1,17 +1,17 @@
 gomno-server
 ============
 Outbreak monitoring server for GOMNO. Functionality can be broken down into data-in, data-munge, and data-out:
-- **data-in**: 
+- **data-in**
   - Data aggregators
-    - Atom feed aggregation,
-    - Web service reader and proxy
+    - Atom feed aggregation of Outbreak Time Series Spec's feeds
+    - Web service (JSON) reader and proxier
   - Data detection via #GOMNO hastag (in Twiiter or search indexes)
   - Email alert receiver and responder
-- **data-munge**: 
-  - Data is stored in HDFS
+- **data-munge**
+  - Data is stored as [Apache Parquet](parquet.incubator.apache.org/) in HDFS 
   - Main analysis is via Spark (scala)
   - Outbreak detection is via Spark calling into [The R-Package ’surveillance’](http://cran.r-project.org/web/packages/surveillance/vignettes/surveillance.pdf)
-- **data-out**: 
+- **data-out**
   - HTML front including visualizations via **EbolaMapper** "Web Components"
   - Web service with Outbreak Time Series API data feed (node.js)
   - Atom feed with Outbreak Time Series XML namespaced into posts
@@ -19,6 +19,21 @@ Outbreak monitoring server for GOMNO. Functionality can be broken down into data
   - Includes alarm notification via email
   
 License is Apache 2.0. Contributors will need to sign a CLA as it is envisioned that new corporations, NGOs, and governments will deploy this codebase so the IPRs need to be clearly defined for the lawyers.
+
+## Status
+This project was started in mid December 2014, so these are early days. **This document is really a roadmap of what will be done. Docs are ahead of working code. This porject's GitHub issues tracker is the place to dig into the nitty gritty of where things are at. The following is a very high level status summary of what is currently working.
+- **data-in**
+  - Web service (JSON) readers for ebolainliberia.org, https://data.hdx.rwlabs.org/ebola, and similar.
+- **data-munge**
+  - Data is stored as [Apache Parquet](parquet.incubator.apache.org/) in HDFS 
+- **data-out**
+  - Web service JSON with Outbreak Time Series API data feed (node.js) 
+
+Next steps:
+- CSV injestion, specifically the [Caitlin Rivers' CSVs](https://github.com/JohnTigue/EbolaMapper/wiki/Other-Coders#caitlin-rivers)
+- CSV generation. Export outbreak data in Parquet file to CSV comformant to the Outbreak Time Series Specification.
+- **EbolaMapper** visualizations of the 2014 Ebola in West Africa Outbreak
+
 
 ## Overview
 GOMNO is modern Internet technology for outbreak monitoring. It has some advanced, structured interfaces and highly scalable internals. Yet it is also explicitly designed to work with lower tech, semi-structured Internet data.
