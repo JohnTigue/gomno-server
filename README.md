@@ -55,4 +55,4 @@ Spark was chosen because:
 - Plays well with existing Java and R tools and the Hadoop ecosystem
 - Spark 1.1 has nice JSON tools; "No need to define JSON schema, no ETL, easy to access complex structures"
 	 - in@~9m: https://www.youtube.com/watch?v=MFSUAkDBSdQ&index=7&list=PL-x35fyliRwiDhtOvRSNgMdw05xFMzvhU
-
+- Spark can deal with streaming situations, such as Twitter streams of (hopefully) geotagged #GOMNO tagged messages, as well as [standard UN emergency hastags](http://irevolution.net/2014/11/05/social-media-hashtag-standards-disaster-response/)
