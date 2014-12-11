@@ -20,8 +20,13 @@ Outbreak monitoring server for GOMNO. Functionality can be broken down into data
   
 License is Apache 2.0. Contributors will need to sign a CLA as it is envisioned that new corporations, NGOs, and governments will deploy this codebase so the IPRs need to be clearly defined for the lawyers.
 
+## Overview
 GOMNO is modern Internet technology for outbreak monitoring. It has some advanced, structured interfaces and highly scalable internals. Yet it is also explicitly designed to work with lower tech, semi-structured Internet data.
 For example, on the high-end is an Atom feed with Outbreak Time Series Specification data namespaced in. On the low end, is the data detection via serch index. This can be simply a Web page containing the #GOMNO hashtag and an HTML table with Outbreak Time Series Spec'd data in it or a link to a CSV file which is conformant to the Outbreak Time Series Spec. GOMNO gets an alert from a search engines and then goes to fecth the data via HTTP.
+
+The "N" is GOMNO is for "Network." GOMNO is architeched for a decentralized network. There should be no central authority so that in the case of dire global breakdown the network can continue to function. Certainly, certain high statused organizations will become the go-to places for information on outbreaks. For example, the UN's WHO could be a significant player. 
+
+GOMNO is an acronym for Globlal Outbreak Monitoring Network Organization. The Organization is simply an open group of interested parties who congregate to define, enable, and support a Global Outbreak Monitoring Network. The Network is designed to be decentralized. Data is easily aggregated. So, an individual goverment could deploy a GOMNO server for collecting their data, they could publish the data openly on the Internet for aggregation. On the ohter hand, if they are concerned with keeping the information more privately controlled, they can deploy a GOMNO server and, say only share the data with WHO or their partner at Oxford, SEEG. 
 
 ## Why spark is used for GOMNO 
 - GOMNO needs to be globally scalable. 
