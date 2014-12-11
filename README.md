@@ -22,3 +22,17 @@ License is Apache 2.0. Contributors will need to sign a CLA as it is envisioned 
 
 GOMNO is modern Internet technology for outbreak monitoring. It has some advanced, structured interfaces and highly scalable internals. Yet it is also explicitly designed to work with lower tech, semi-structured Internet data.
 For example, on the high-end is an Atom feed with Outbreak Time Series Specification data namespaced in. On the low end, is the data detection via serch index. This can be simply a Web page containing the #GOMNO hashtag and an HTML table with Outbreak Time Series Spec'd data in it or a link to a CSV file which is conformant to the Outbreak Time Series Spec. GOMNO gets an alert from a search engines and then goes to fecth the data via HTTP.
+
+## Why spark is used for GOMNO 
+- GOMNO needs to be globally scalable. 
+- It is a GOMNO requirement to run on all open source code (AWS as a deploy target is possible but MUST NOT be a requirement)
+- The "volume" aspect of "big data" is really not significant, at this time.
+- Yet put in terms of [IBM's 4 "V"s of big data](http://www.ibmbigdatahub.com/infographic/four-vs-big-data), this project has 3 out of 4 problems already. Variety and veracity are already issues. Volume and velocity should be expected, especially if dealing with email and twitter. 
+
+Spark was chosen because:
+- Most active big data open source project. In Apache.
+- Good at statistics, OLAP, and data munging including loosely structured data (such as coming from multiple sources)
+- Plays well with existing Java and R tools and the Hadoop ecosystem
+- Spark 1.1 has nice JSON tools; "No need to define JSON schema, no ETL, easy to access complex structures"
+	 - in@~9m: https://www.youtube.com/watch?v=MFSUAkDBSdQ&index=7&list=PL-x35fyliRwiDhtOvRSNgMdw05xFMzvhU
+
